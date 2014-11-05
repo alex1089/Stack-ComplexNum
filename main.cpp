@@ -3,7 +3,6 @@
 #include "Complex_Number.h"
 #include "Employee.h"
 #include "Stack.h"
-#include "Stack.cpp"
 
 int main(){
     Date testDate;

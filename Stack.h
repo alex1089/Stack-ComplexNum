@@ -26,5 +26,7 @@ class Stack {
 	int stackTop;
 	T* stackPtr[6];  // default template to SIZE=6
 };
+
+#include "Stack.cpp"	// Stack Template implementation
 #endif
 	

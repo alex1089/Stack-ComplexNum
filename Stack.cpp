@@ -2,7 +2,6 @@
 // Aleksey Leshchuk CISP400
 
 #include <iostream>
-#include "Stack.h"
 using namespace std;
 
 // templated Stack constructor
