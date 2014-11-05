@@ -35,6 +35,6 @@ class Employee{
 };
 
 // overloaded operator<<
-std::ostream& operator<<(std::ostream, const Employee&);
+std::ostream& operator<<(std::ostream &, const Employee&);
 
 #endif
