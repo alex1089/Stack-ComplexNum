@@ -1,5 +1,7 @@
 // Fig. 9.17: Date.h 
 // Date class definition; Member functions defined in Date.cpp
+// Aleksey Leshchuk CISP400
+// AD6
 #ifndef DATE_H
 #define DATE_H
 
@@ -7,7 +9,7 @@
 
 class Date {
 public:
-   static const unsigned int monthsPerYear = 12; // months in a year
+   static const  int monthsPerYear = 12; // months in a year
    explicit Date( const int& = 1, const int& = 1, const int& = 1900 ); // default constructor
    // operator==(Date) compares two Date objects for equality
    bool operator== (const Date&) const;
@@ -20,12 +22,12 @@ public:
     int getYear() const;
    ~Date(); // provided to confirm destruction order
 private:
-   unsigned int month; // 1-12 (January-December)
-   unsigned int day; // 1-31 based on month
-   unsigned int year; // any year
+    int month; // 1-12 (January-December)
+    int day; // 1-31 based on month
+    int year; // any year
 
    // utility function to check if day is proper for month and year
-   unsigned int checkDay( const int& ) const; 
+    int checkDay( const int& ) const; 
 }; // end class Date
 
 // non member overloaded operator<< function for Date object

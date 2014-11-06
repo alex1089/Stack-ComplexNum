@@ -1,5 +1,7 @@
 // Fig. 9.18: Date.cpp
 // Date class member-function definitions.
+// Aleksey Leshchuk CISP400
+// AD6
 #include <array>
 #include <iostream>
 #include <string>
@@ -71,7 +73,7 @@ Date::~Date()
 
 // utility function to confirm proper day value based on 
 // month and year; handles leap years, too
-unsigned int Date::checkDay( const int& testDay ) const
+int Date::checkDay( const int& testDay ) const
 {
    static const array< int, monthsPerYear + 1 > daysPerMonth = 
       { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };

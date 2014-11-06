@@ -1,14 +1,14 @@
-// Complex_Number.h header
+// Complex.h header
 // Aleksey Leshchuk CISP400 AD6
 
-#ifndef COMPLEX_NUMBER_H
-#define COMPLEX_NUMBER_H
+#ifndef COMPLEX_H
+#define COMPLEX_H
 #include <iostream>
 
-class Complex_Number {
+class Complex {
     public:
-	// Complex_Number constructor, default values to 0.0
-	explicit Complex_Number( const double& =0.0, const double& =0.0 );
+	// Complex constructor, default values to 0.0
+	explicit Complex( const double& =0.0, const double& =0.0 );
 	// setReal() sets the real number of the complex number
 	void setReal( const double& );
 	// setImaginary(double) sets the imaginary number of the object
@@ -17,13 +17,13 @@ class Complex_Number {
 	double getImaginary() const;
 	// getReal() returns the real part of the complex number
 	double getReal() const;
-	// operator==(Complex_Number) compares objects for equality
-	bool operator==( const Complex_Number& ) const ;
+	// operator==(Complex) compares objects for equality
+	bool operator==( const Complex& ) const ;
     private:
 	double real;
 	double imaginary;
 };
 
-std::ostream& operator<<(std::ostream&, const Complex_Number&);
+std::ostream& operator<<(std::ostream&, const Complex&);
 
 #endif
