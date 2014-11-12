@@ -19,7 +19,7 @@ int main(){
     Stack<Date> date1Stack,date2Stack;			// 2 Date stacks
     Stack<Employee> employee1Stack,employee2Stack;	// 2 Employee stacks
 
-    cout<<"**int-int   Testing integers   int-int**\n";
+    cout<<"\n**int-int   Testing integers   int-int**\n";
     cout<<"Create two 6-element integer-stacks(int1Stack and int2Stack)."<<endl;
     cout<<"\nPush integers into the integer-stacks.";
     cout<<"\n  Push integers into the int1Stack.";
