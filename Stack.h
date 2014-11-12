@@ -3,6 +3,9 @@
 
 #ifndef STACK_H
 #define STACK_H
+#include <iostream>
+#include <exception>
+using namespace std;
 
 template <class T>
 class Stack {
@@ -27,9 +30,6 @@ class Stack {
 	T* stackPtr[6];  // default template to SIZE=6
 };
 
-#include <iostream>
-#include <exception>
-using namespace std;
 
 class empty_stack: exception { // is an exception inheritance
 	const char* what() { return "\nThe stack is empty.";}
@@ -38,12 +38,13 @@ class empty_stack: exception { // is an exception inheritance
 // templated Stack constructor
 template <class T>
 Stack<T>::Stack() :
-stackSize(6),
-stackTop(-1)
+	    stackSize(6),
+	    stackTop(-1)
 {
 	for (int i = 0; i<6; i++)	// initalize stack array to nullptr
 		stackPtr[i] = nullptr;
 }
+
 // push(T) pushes an element onto the stack
 template <class T>
 void Stack<T>::push(const T& elem) {
@@ -51,8 +52,8 @@ void Stack<T>::push(const T& elem) {
 		cerr << "\nStack is full, unable to push";
 	}
 	else {
-		stackPtr[++stackTop] = new T;	    // initalize stackPtr array at index ++top with elem
-		*stackPtr[stackTop] = elem;
+		stackPtr[++stackTop] = new T(elem);	    // initalize stackPtr array at index ++top with elem
+		cout<<endl<<"\t"<<*stackPtr[stackTop]<<" pushed into the stack.";
 	}
 }
 

@@ -24,7 +24,6 @@ Date::Date( const int& mn, const int& dy, const int& yr ){
    if ( mn > 0 && mn <= monthsPerYear ){ // validate the monthfter the 8/8/2013 update,\nthe Accounts information***\n
       month = mn;
     } else {
-	cout<<"Invalid month ("<<mn<<") set to 1.\n";
 	month=1;
    }
 
@@ -32,7 +31,6 @@ Date::Date( const int& mn, const int& dy, const int& yr ){
        year = yr; // could validate yr
    } else {
        year=2011;
-       cout<<"Invalid year ("<<yr<<") set to 2011.\n";
    }
    day = checkDay( dy ); // validate the day
    
